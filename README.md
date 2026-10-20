@@ -1,4 +1,4 @@
-# PayPal Flight Recorder
+# PayGuard Flight Recorder
 
 An AI-assisted investigation tool for PayPal sandbox API failures.
 
@@ -37,7 +37,7 @@ does not repair the original failed order.
 
 ## Release status
 
-Verified local release candidate; public distribution and hackathon submission pending.
+Verified local release candidate. Source code is publicly available on GitHub; hackathon submission remains pending.
 
 See CHANGELOG.md and docs/RELEASE_CHECKLIST.md.
 ## Verified release candidate
@@ -87,5 +87,6 @@ Automated installation is not provided.
 - Comprehensive security review has not been completed.
 
 Licensed under Apache License 2.0. See LICENSE.
-Public GitHub distribution and Devpost submission remain pending.
+Public source repository: https://github.com/Ten788/PayGuard
+Devpost submission remains pending.
 See docs/TEST_EVIDENCE.md for recorded evidence.
