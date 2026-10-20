@@ -18,3 +18,6 @@ dist/
 *.dpapi
 .env
 .env.*
+
+# Generated release and verification artifacts
+/artifacts/

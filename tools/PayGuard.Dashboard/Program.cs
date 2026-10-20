@@ -1,7 +1,7 @@
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://127.0.0.1:5078");
+builder.WebHost.UseUrls(Environment.GetEnvironmentVariable("PAYGUARD_DASHBOARD_URL") ?? "http://127.0.0.1:5078");
 
 var app = builder.Build();
 
@@ -33,9 +33,15 @@ app.MapPost("/api/investigations", () =>
     {
         try
         {
-            var dll = Path.GetFullPath(Path.Combine(
+            var packagedDll = Path.Combine(
+                AppContext.BaseDirectory,
+                "LiveTrace", "PayGuard.LiveTrace.dll");
+
+            var developmentDll = Path.GetFullPath(Path.Combine(
                 AppContext.BaseDirectory,
                 "../../../../PayGuard.LiveTrace/bin/Debug/net10.0/PayGuard.LiveTrace.dll"));
+
+            var dll = File.Exists(packagedDll) ? packagedDll : developmentDll;
 
             if (!File.Exists(dll))
                 throw new FileNotFoundException("LiveTrace executable missing.", dll);

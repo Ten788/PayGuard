@@ -97,3 +97,24 @@ Remaining presentation improvement: optimize five-metric layout.
 
 Pending release gates include packaging, setup verification,
 dependency/license review, and hackathon submission requirements.
+
+## PG-R04-144 - Packaged Release Verification
+
+Verified on 2026-10-20:
+
+- PG-R04-135: Published LiveTrace starts and rejects missing sandbox credentials.
+- PG-R04-136: Published dashboard launches packaged LiveTrace and reports the expected credential failure.
+- PG-R04-137: Packaged live PayPal sandbox and local AI investigation completed successfully.
+- Real PayPal sandbox failure: GET_ORDER HTTP=404.
+- Local AI diagnosis: AI STATUS: GENERATED.
+- New sandbox order: CREATE_ORDER HTTP=201.
+- Independent retrieval: GET_ORDER HTTP=200.
+- Recovery verification: PASS.
+- Original failed order repaired: NO.
+- Payment captured: NO.
+- PG-R04-138: CoreTests 29/29 and TraceTests 18/18 passed in Release configuration.
+- PG-R04-139: Generated artifacts ignored by Git; no tracked release artifacts.
+- PG-R04-140: Apache License 2.0 installed from apache.org; structural validation performed. Independent official checksum comparison was not performed.
+- PG-R04-142: Credential utility static screening passed 10/10 checks; this is not a complete security audit.
+
+Remaining gates: final security review, clean release commit, public repository, demonstration materials, official competition compliance review, and Devpost submission approval.
