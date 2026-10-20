@@ -1,0 +1,20 @@
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+local-secrets/
+*.secrets.json
+*.credentials.json
+
+# Release and local development exclusions
+*.pre-PG-*
+*.pre-RL-*
+docs/checkpoints/
+release/
+dist/
+*.zip
+*.dpapi
+.env
+.env.*
