@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PayGuard.Core/PayGuard.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PayGuard.CoreTests/PayGuard.CoreTests.csproj" />
+  </Folder>
+</Solution>
