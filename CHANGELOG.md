@@ -23,7 +23,7 @@ All notable changes to PayPal Flight Recorder are recorded here.
 - Live investigation currently covers one controlled failure scenario.
 - Replacement verification is not repair of the original failed order.
 - Live AI text is advisory and not independently verified.
-- Release packaging and license review remain outstanding.
+- Public distribution, final security review, and demo materials remain outstanding.
 ### Full investigation milestone (PG-R03-078 through PG-R03-082)
 - Added `--full-investigation` mode to LiveTrace.
 - Combined controlled PayPal failure, local AI diagnosis, and replacement-order verification.
@@ -47,3 +47,16 @@ All notable changes to PayPal Flight Recorder are recorded here.
 - Shows the replacement order ID and explicitly states that the original order was not repaired.
 - Preserves the no-payment-capture disclosure.
 - Browser presentation visually accepted on 2026-10-20.
+### Verified release candidate - 2026-10-20
+
+- Published dashboard launched packaged LiveTrace successfully.
+- Real PayPal sandbox HTTP 404 failure observed.
+- Local Qwen2.5 3B AI diagnosis generated.
+- New sandbox order created: HTTP 201.
+- Independent retrieval verified: HTTP 200.
+- Original failed order not repaired; no payment captured.
+- All 47 deterministic Release tests passed.
+- Apache License 2.0 installed with user approval.
+- Release artifacts excluded from Git.
+- Initial credential utility static screening passed.
+- Public GitHub distribution and Devpost submission pending.
